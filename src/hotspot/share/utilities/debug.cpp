@@ -595,9 +595,7 @@ extern "C" NOINLINE u4 u5decode(intptr_t addr) {
 // there is no limit on the count of items printed; the
 // printing stops when an null is printed or at limit.
 // See documentation for UNSIGNED5::Reader::print(count).
-extern "C" NOINLINE intptr_t u5p(intptr_t addr,
-                                  intptr_t limit,
-                                  int count) {
+extern "C" NOINLINE intptr_t u5p(intptr_t addr, intptr_t limit, int count) {
   Command c("u5p");
   u1* arr = (u1*)addr;
   if (limit && limit < addr)  limit = addr;
