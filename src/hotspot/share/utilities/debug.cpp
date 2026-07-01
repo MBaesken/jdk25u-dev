@@ -560,8 +560,7 @@ extern "C" NOINLINE void findclass(const char* class_name_pattern, int flags) {
   ClassPrinter::print_classes(class_name_pattern, flags, tty);
 }
 
-extern "C" NOINLINE void findmethod(const char* class_name_pattern,
-                                     const char* method_pattern, int flags) {
+extern "C" NOINLINE void findmethod(const char* class_name_pattern, const char* method_pattern, int flags) {
   Command c("findmethod");
   ClassPrinter::print_flags_help(tty);
   ClassPrinter::print_methods(class_name_pattern, method_pattern, flags, tty);
@@ -736,7 +735,6 @@ extern "C" JNIEXPORT void JVM_debug_helpers_keeper(void* p1, void* p2, void* p3,
   pns2();
 #endif
 }
-
 
 // Returns true iff the address p is readable and *(intptr_t*)p != errvalue
 extern "C" bool dbg_is_safe(const void* p, intptr_t errvalue) {
